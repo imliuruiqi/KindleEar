@@ -11,8 +11,9 @@ class Technews(BaseFeedBook):
     language              = 'zh-cn'
     feed_encoding         = "utf-8"
     page_encoding         = "utf-8"
-    mastheadfile          = "mh_ftchinese.gif"
-    coverfile             = "cv_ftchinese.jpg"
+    mastheadfile          = DEFAULT_MASTHEAD
+    coverfile             = DEFAULT_COVER
+    keep_image            = False
     oldest_article        = 1
     
     feeds = [
