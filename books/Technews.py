@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 from base import BaseFeedBook
+
 def getBook():
     return Technews
+
 class Technews(BaseFeedBook):
     title                 = u'科技新闻'
     description           = u'科技新闻精选,少数派，好奇心日报,36kr,果壳...'
@@ -12,6 +14,7 @@ class Technews(BaseFeedBook):
     mastheadfile          = "mh_ftchinese.gif"
     coverfile             = "cv_ftchinese.jpg"
     oldest_article        = 1
+    
     feeds = [
             (u'少数派', 'http://sspai.com/feed'),
             (u'好奇心日报', 'http://www.qdaily.com/feed'),
@@ -29,7 +32,8 @@ class Technews(BaseFeedBook):
             (u'Engadget中文版','http://feedmaker.kindle4rss.com/feeds/cn.engadget.com.xml',True),
             (u'环球科学', 'http://blog.sina.com.cn/rss/sciam.xml'),
             ]
-def fetcharticle(self, url, opener, decoder):
+    
+    def fetcharticle(self, url, opener, decoder):
         #每个URL都增加一个后缀full=y，如果有分页则自动获取全部分页
         url += '?full=y'
         return BaseFeedBook.fetcharticle(self,url,opener,decoder)
