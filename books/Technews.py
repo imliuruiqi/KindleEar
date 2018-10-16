@@ -14,6 +14,9 @@ class Technews(BaseFeedBook):
     mastheadfile          = DEFAULT_MASTHEAD
     coverfile             = DEFAULT_COVER
     keep_image            = False
+    network_timeout       = 60
+    oldest_article        = 7
+    max_articles_per_feed = 9
     oldest_article        = 1
     
     feeds = [
@@ -29,12 +32,8 @@ class Technews(BaseFeedBook):
             ('cnBeta','http://feedmaker.kindle4rss.com/feeds/cnbeta.xml'),
             (u'月光博客','http://feed.williamlong.info/'),
             (u'DeepTech深科技','http://feedmaker.kindle4rss.com/feeds/mit-tr.weixin.xml'),
-            (u'InfoQ中文','http://feedmaker.kindle4rss.com/feeds/cn.infoq.xml',True),
-            (u'Engadget中文版','http://feedmaker.kindle4rss.com/feeds/cn.engadget.com.xml',True),
+            (u'InfoQ中文','http://feedmaker.kindle4rss.com/feeds/cn.infoq.xml'),
+            (u'Engadget中文版','http://feedmaker.kindle4rss.com/feeds/cn.engadget.com.xml'),
             (u'环球科学', 'http://blog.sina.com.cn/rss/sciam.xml'),
             ]
-    
-    def fetcharticle(self, url, opener, decoder):
-        #每个URL都增加一个后缀full=y，如果有分页则自动获取全部分页
-        url += '?full=y'
-        return BaseFeedBook.fetcharticle(self,url,opener,decoder)
+
