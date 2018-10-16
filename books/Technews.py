@@ -15,8 +15,8 @@ class Technews(BaseFeedBook):
     coverfile             = DEFAULT_COVER
     keep_image            = False
     network_timeout       = 60
-    oldest_article        = 7
-    max_articles_per_feed = 9
+    oldest_article        = 1
+    max_articles_per_feed = 5
     oldest_article        = 1
     
     feeds = [
@@ -26,10 +26,8 @@ class Technews(BaseFeedBook):
             (u'小道消息', 'http://hutu.me/feed'),
             (u'极客公园', 'http://www.geekpark.net/rss'),
             (u'TechCrunch 中国', 'http://techcrunch.cn/feed/'),
-            (u'爱范儿', 'http://www.ifanr.com/feed'),
             (u'科学松鼠会', 'http://songshuhui.net/feed'),
             (u'果壳','http://feeds.brandipo.com/users/1/web_requests/21/guoke.xml'),
-            ('cnBeta','http://feedmaker.kindle4rss.com/feeds/cnbeta.xml'),
             (u'月光博客','http://feed.williamlong.info/'),
             (u'DeepTech深科技','http://feedmaker.kindle4rss.com/feeds/mit-tr.weixin.xml'),
             (u'InfoQ中文','http://feedmaker.kindle4rss.com/feeds/cn.infoq.xml'),
