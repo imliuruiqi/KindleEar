@@ -17,12 +17,8 @@ class Technews(BaseFeedBook):
     network_timeout       = 60
     oldest_article        = 1
     max_articles_per_feed = 5
-    oldest_article        = 1
-    
+ 
     feeds = [
-            (u'少数派', 'http://sspai.com/feed'),
-            (u'好奇心日报', 'http://www.qdaily.com/feed'),
-            ('36kr', 'http://www.36kr.com/feed?1.0'),
             (u'小道消息', 'http://hutu.me/feed'),
             (u'极客公园', 'http://www.geekpark.net/rss'),
             (u'TechCrunch 中国', 'http://techcrunch.cn/feed/'),
